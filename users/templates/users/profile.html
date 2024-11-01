@@ -1,0 +1,18 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <!-- display current users account info -->
+     <div class="content-section">
+        <div class="media">
+
+            <!-- profile pic still not displaying -->
+            <img class="rounded-cirle account-img" title="profile_pic" src="{{ user.profile.image.url }}">
+            <div class="media-body">
+                <h2 class="account-heading">{{ user.username }}</h2>
+                <p class="text-secondary">{{ user.email }}</p>
+                <p class="text-secondar">{{ user.profile.bio }}</p>
+            </div>
+        </div>
+     </div>
+
+{% endblock content %}
